@@ -3,10 +3,10 @@ $(document).ready(function(){
     url: "https://en.wikipedia.org/w/api.php",
     data: {
         format: "json",
-        action: "parse",
-        page: "Ahmedabad",
-        prop:"text",
-        section:0,
+        action: "query", //parse
+        titles: "Ahmedabad"//,
+        //prop:"text"//,
+        //section:0,
     },
     dataType: 'jsonp',
     headers: {
@@ -16,19 +16,19 @@ $(document).ready(function(){
         console.log(data)
   //      $("#article").html(data.parse.text["*"])
 
-        		var markup = data.parse.text["*"];
-		var i = $('<div></div>').html(markup);
+      //  		var markup = data.parse.text["*"];
+		//var i = $('<div></div>').html(markup);
 
 		// remove links as they will not work
-		i.find('a').each(function() { $(this).replaceWith($(this).html()); });
+		//i.find('a').each(function() { $(this).replaceWith($(this).html()); });
 
 		// remove any references
-		i.find('sup').remove();
+	//	i.find('sup').remove();
 
 		// remove cite error
-		i.find('.mw-ext-cite-error').remove();
+//		i.find('.mw-ext-cite-error').remove();
 
-		$("body").append($(i).find('p'));
+	//	$("body").append($(i).find('p'));
 
 
     }
