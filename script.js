@@ -4,7 +4,9 @@ $(document).ready(function(){
     data: {
         format: "json",
         action: "query", //parse
-        titles: "Ahmedabad"//,
+        formatversion: 2,
+        titles: "Ahmedabad",
+        prop: "info"
         //prop:"text"//,
         //section:0,
     },
@@ -14,6 +16,7 @@ $(document).ready(function(){
     },
     success: function (data) {
         console.log(data)
+        console.log(data["query"]["pages"][0]["title"]);
   //      $("#article").html(data.parse.text["*"])
 
       //  		var markup = data.parse.text["*"];
