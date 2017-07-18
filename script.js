@@ -1,4 +1,4 @@
-var searchTerm = "Albert"
+var searchTerm = "Red"
 $(document).ready(function(){
   $.ajax({
     url: "https://en.wikipedia.org/w/api.php",
@@ -28,7 +28,8 @@ $(document).ready(function(){
         console.log(data)
         for (var x = 0; x <= 9; x++){
           $("#searchResults").append("<div class= 'searchResult'><h4>" + data["query"]["pages"][x]["title"] + "</h4>")
-                             .append("<p>" + data["query"]["pages"][x]["terms"]["description"][0] + "</p>");
+                             .append("<p>" + data["query"]["pages"][x]["terms"]["description"][0] + "</p>")
+                             .append("<img src=" + data["query"]["pages"][x]["thumbnail"]["source"] + " height= " + data["query"]["pages"][x]["thumbnail"]["height"] + " width= " + data["query"]["pages"][x]["thumbnail"]["width"] + '>');
         }
   //      $("#article").html(data.parse.text["*"])
 
