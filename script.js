@@ -1,3 +1,4 @@
+var searchTerm = "Albert"
 $(document).ready(function(){
   $.ajax({
     url: "https://en.wikipedia.org/w/api.php",
@@ -12,7 +13,7 @@ $(document).ready(function(){
 	      pithumbsize: 50,
 	      pilimit: 10,
 	      wbptterms: "description",
-	      gpssearch: "Albert Ei",
+	      gpssearch: searchTerm,
 	      gpslimit: "10"
         //titles: "Ahmedabad",
         //prop: "info"
