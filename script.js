@@ -5,8 +5,17 @@ $(document).ready(function(){
         format: "json",
         action: "query", //parse
         formatversion: 2,
-        titles: "Ahmedabad",
-        prop: "info"
+        generator: "prefixsearch",
+        gpssearch: "Alb",
+        prop: "pageimages|pageterms",
+        piprop: "thumbnail",
+	      pithumbsize: 50,
+	      pilimit: 10,
+	      wbptterms: "description",
+	      gpssearch: "Albert Ei",
+	      gpslimit: "10"
+        //titles: "Ahmedabad",
+        //prop: "info"
         //prop:"text"//,
         //section:0,
     },
