@@ -26,7 +26,10 @@ $(document).ready(function(){
     },
     success: function (data) {
         console.log(data)
-        console.log(data["query"]["pages"][0]["title"]);
+        for (var x = 0; x <= 9; x++){
+          $("#searchResults").append("<div class= 'searchResult'><h4>" + data["query"]["pages"][x]["title"] + "</h4>")
+                             .append("<p>" + data["query"]["pages"][x]["terms"]["description"][0] + "</p>");
+        }
   //      $("#article").html(data.parse.text["*"])
 
       //  		var markup = data.parse.text["*"];
